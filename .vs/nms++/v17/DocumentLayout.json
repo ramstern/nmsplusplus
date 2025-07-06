@@ -1,0 +1,272 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\nmsplusplus\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8560EA92-00ED-4CE2-9EC0-C4744E22EB58}|nms_testing.vcxproj|D:\\nmsplusplus\\header\\GeneratedCppTypes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8560EA92-00ED-4CE2-9EC0-C4744E22EB58}|nms_testing.vcxproj|solutionrelative:header\\GeneratedCppTypes.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8560EA92-00ED-4CE2-9EC0-C4744E22EB58}|nms_testing.vcxproj|D:\\nmsplusplus\\src\\NMSapp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8560EA92-00ED-4CE2-9EC0-C4744E22EB58}|nms_testing.vcxproj|solutionrelative:src\\NMSapp.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8560EA92-00ED-4CE2-9EC0-C4744E22EB58}|nms_testing.vcxproj|D:\\nmsplusplus\\header\\NMSapp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8560EA92-00ED-4CE2-9EC0-C4744E22EB58}|nms_testing.vcxproj|solutionrelative:header\\NMSapp.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\unordered_map||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector||{3B902123-F8A7-4915-9F01-361F908088D0}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8560EA92-00ED-4CE2-9EC0-C4744E22EB58}|nms_testing.vcxproj|D:\\nmsplusplus\\src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8560EA92-00ED-4CE2-9EC0-C4744E22EB58}|nms_testing.vcxproj|solutionrelative:src\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8560EA92-00ED-4CE2-9EC0-C4744E22EB58}|nms_testing.vcxproj|D:\\nmsplusplus\\include\\NMSgen\\details\\generics_impl.hpp||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{8560EA92-00ED-4CE2-9EC0-C4744E22EB58}|nms_testing.vcxproj|solutionrelative:include\\NMSgen\\details\\generics_impl.hpp||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8560EA92-00ED-4CE2-9EC0-C4744E22EB58}|nms_testing.vcxproj|D:\\nmsplusplus\\include\\NMSgen\\details\\MonoLayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8560EA92-00ED-4CE2-9EC0-C4744E22EB58}|nms_testing.vcxproj|solutionrelative:include\\NMSgen\\details\\MonoLayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8560EA92-00ED-4CE2-9EC0-C4744E22EB58}|nms_testing.vcxproj|D:\\nmsplusplus\\header\\Logger.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{8560EA92-00ED-4CE2-9EC0-C4744E22EB58}|nms_testing.vcxproj|solutionrelative:header\\Logger.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\remx9\\source\\repos\\MonoLayer\\src\\CSharpInterpreter.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\remx9\\source\\repos\\MonoLayer\\header\\CSharpInterpreter.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\remx9\\source\\repos\\MonoLayer\\header\\engine_io.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\remx9\\source\\repos\\MonoLayer\\header\\MonoLayer.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\remx9\\source\\repos\\MonoLayer\\src\\engine_io.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\remx9\\source\\repos\\MonoLayer\\header\\traits_ext.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\remx9\\source\\repos\\MonoLayer\\src\\MonoLayer.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\remx9\\source\\repos\\MonoLayer\\header\\Logger.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "NMSapp.cpp",
+              "DocumentMoniker": "D:\\nmsplusplus\\src\\NMSapp.cpp",
+              "RelativeDocumentMoniker": "src\\NMSapp.cpp",
+              "ToolTip": "D:\\nmsplusplus\\src\\NMSapp.cpp",
+              "RelativeToolTip": "src\\NMSapp.cpp",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAuwBwAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-03T18:26:21.854Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{34c7837f-3b3a-449c-bdf0-bdad86cbaf4a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{34c7837f-3b3a-449c-bdf0-bdad86cbaf4a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GeneratedCppTypes.h",
+              "DocumentMoniker": "D:\\nmsplusplus\\header\\GeneratedCppTypes.h",
+              "RelativeDocumentMoniker": "header\\GeneratedCppTypes.h",
+              "ToolTip": "D:\\nmsplusplus\\header\\GeneratedCppTypes.h",
+              "RelativeToolTip": "header\\GeneratedCppTypes.h",
+              "ViewState": "AgIAAD+iAAAAAAAAAAAAAEmiAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-07-04T00:11:45.018Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "unordered_map",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\unordered_map",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\unordered_map",
+              "ViewState": "AgIAALEBAAAAAAAAAAAUwMIBAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-02T23:43:12.449Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "main.cpp",
+              "DocumentMoniker": "D:\\nmsplusplus\\src\\main.cpp",
+              "RelativeDocumentMoniker": "src\\main.cpp",
+              "ToolTip": "D:\\nmsplusplus\\src\\main.cpp",
+              "RelativeToolTip": "src\\main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-03T16:54:41.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NMSapp.h",
+              "DocumentMoniker": "D:\\nmsplusplus\\header\\NMSapp.h",
+              "RelativeDocumentMoniker": "header\\NMSapp.h",
+              "ToolTip": "D:\\nmsplusplus\\header\\NMSapp.h",
+              "RelativeToolTip": "header\\NMSapp.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-03T18:26:06.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Logger.h",
+              "DocumentMoniker": "D:\\nmsplusplus\\header\\Logger.h",
+              "RelativeDocumentMoniker": "header\\Logger.h",
+              "ToolTip": "D:\\nmsplusplus\\header\\Logger.h",
+              "RelativeToolTip": "header\\Logger.h",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAQwCYAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-15T04:25:02.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CSharpInterpreter.cpp",
+              "DocumentMoniker": "C:\\Users\\remx9\\source\\repos\\MonoLayer\\src\\CSharpInterpreter.cpp",
+              "ToolTip": "C:\\Users\\remx9\\source\\repos\\MonoLayer\\src\\CSharpInterpreter.cpp",
+              "ViewState": "AgIAANQCAAAAAAAAAIBJwP4CAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-17T18:31:26.104Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "generics_impl.hpp",
+              "DocumentMoniker": "D:\\nmsplusplus\\include\\NMSgen\\details\\generics_impl.hpp",
+              "RelativeDocumentMoniker": "include\\NMSgen\\details\\generics_impl.hpp",
+              "ToolTip": "D:\\nmsplusplus\\include\\NMSgen\\details\\generics_impl.hpp",
+              "RelativeToolTip": "include\\NMSgen\\details\\generics_impl.hpp",
+              "ViewState": "AgIAAOQBAAAAAAAAAABRwOcBAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-18T06:07:15.391Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CSharpInterpreter.h",
+              "DocumentMoniker": "C:\\Users\\remx9\\source\\repos\\MonoLayer\\header\\CSharpInterpreter.h",
+              "ToolTip": "C:\\Users\\remx9\\source\\repos\\MonoLayer\\header\\CSharpInterpreter.h",
+              "ViewState": "AgIAAA0AAAAAAAAAAAASwEAAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-17T18:31:21.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "vector",
+              "DocumentMoniker": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
+              "ToolTip": "C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\include\\vector",
+              "ViewState": "AgIAAP8AAAAAAAAAAAAhwA8BAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-07-04T00:09:29.44Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "engine_io.h",
+              "DocumentMoniker": "C:\\Users\\remx9\\source\\repos\\MonoLayer\\header\\engine_io.h",
+              "ToolTip": "C:\\Users\\remx9\\source\\repos\\MonoLayer\\header\\engine_io.h",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAgwBAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-17T18:07:04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MonoLayer.h",
+              "DocumentMoniker": "C:\\Users\\remx9\\source\\repos\\MonoLayer\\header\\MonoLayer.h",
+              "ToolTip": "C:\\Users\\remx9\\source\\repos\\MonoLayer\\header\\MonoLayer.h",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAgwCUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-18T17:11:36.85Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MonoLayer.h",
+              "DocumentMoniker": "D:\\nmsplusplus\\include\\NMSgen\\details\\MonoLayer.h",
+              "RelativeDocumentMoniker": "include\\NMSgen\\details\\MonoLayer.h",
+              "ToolTip": "D:\\nmsplusplus\\include\\NMSgen\\details\\MonoLayer.h",
+              "RelativeToolTip": "include\\NMSgen\\details\\MonoLayer.h",
+              "ViewState": "AgIAAEoAAAAAAAAAAABBwDoAAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-18T17:08:38.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "engine_io.cpp",
+              "DocumentMoniker": "C:\\Users\\remx9\\source\\repos\\MonoLayer\\src\\engine_io.cpp",
+              "ToolTip": "C:\\Users\\remx9\\source\\repos\\MonoLayer\\src\\engine_io.cpp",
+              "ViewState": "AgIAAEwAAAAAAAAAAABRwCEAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-17T18:07:14.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "traits_ext.h",
+              "DocumentMoniker": "C:\\Users\\remx9\\source\\repos\\MonoLayer\\header\\traits_ext.h",
+              "ToolTip": "C:\\Users\\remx9\\source\\repos\\MonoLayer\\header\\traits_ext.h",
+              "ViewState": "AgIAAAsAAAAAAAAAAABRwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-19T14:12:27.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MonoLayer.cpp",
+              "DocumentMoniker": "C:\\Users\\remx9\\source\\repos\\MonoLayer\\src\\MonoLayer.cpp",
+              "ToolTip": "C:\\Users\\remx9\\source\\repos\\MonoLayer\\src\\MonoLayer.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-11-17T17:32:31.087Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Logger.h",
+              "DocumentMoniker": "C:\\Users\\remx9\\source\\repos\\MonoLayer\\header\\Logger.h",
+              "ToolTip": "C:\\Users\\remx9\\source\\repos\\MonoLayer\\header\\Logger.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-11-18T05:51:51.158Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
