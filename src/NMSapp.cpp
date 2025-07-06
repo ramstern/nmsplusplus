@@ -1,17 +1,17 @@
 #include "../header/NMSapp.h"
-//#include "../header/GeneratedCppTypes.h"
+#include "../header/GeneratedCppTypes.h"
 #include "NMSgen/NMSgen.h"
 
 NMSapp::NMSapp()
 {
 	IO::Initialize();
 
-	/*using namespace libMBIN_NMS_GameComponents;
-	using namespace libMBIN_NMS;*/
+	using namespace NMS_GameComponents;
+	using namespace NMS;
 	
 	CSharpInterpreter::GenerateCppWrappers();
 
-	/*IO::ResourceHandle barren_big_props_biome = {"mbin/BARRENBIGPROPSBIOME.MBIN"};
+	IO::ResourceHandle barren_big_props_biome = {"mbin/BARRENBIGPROPSBIOME.MBIN"};
 
 	IO::ImmediateEdit<GcBiomeData>(barren_big_props_biome, [](GcBiomeData& biome_data)
 		{
@@ -23,11 +23,10 @@ NMSapp::NMSapp()
 			biome_data.FloraLifeLocID.Value = "testogkdkdkdkdkdkdkdkdkdkdkdkdd";
 			biome_data.FuelMultiplier = 2.f;
 
-			biome_data.Water.HeavyAir.Colours[0] = GcHeavyAirColourData{Colour{0.5f, 0.5f, 0.5f, 0.2f}};
 			biome_data.WeatherOptions[0].WeatherWeightings[0] = 1.6f;
 
-			biome_data.ExternalObjectLists[0].TileType.TileType = GcTerrainTileType_holder::TileTypeEnum::Substance;
-		});*/
+			biome_data.ExternalObjectLists[0].TileType.TileType = GcTerrainTileType::TileTypeEnum::Substance;
+		});
 }
 
 NMSapp::~NMSapp()
