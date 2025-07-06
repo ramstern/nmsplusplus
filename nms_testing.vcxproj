@@ -130,16 +130,16 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)external\mono\lib;$(SolutionDir)external\NMSgen\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)nms++\external\mono\lib;$(SolutionDir)external\NMSgen\$(Platform)\$(Configuration)\</AdditionalLibraryDirectories>
       <AdditionalDependencies>mono-2.0-sgen.lib;NMSgen.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <UACExecutionLevel>AsInvoker</UACExecutionLevel>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "$(SolutionDir)external\mono\runtime\mono-2.0-sgen.dll" "$(SolutionDir)$(Platform)\$(Configuration)\"
-copy /Y "$(SolutionDir)external\libMBIN\libMBIN.dll" "$(SolutionDir)$(Platform)\$(Configuration)\"
+      <Command>copy /Y "$(SolutionDir)\nms++\external\mono\runtime\mono-2.0-sgen.dll" "$(SolutionDir)$(Platform)\$(Configuration)\"
+copy /Y "$(SolutionDir)\nms++\external\libMBIN\libMBIN.dll" "$(SolutionDir)$(Platform)\$(Configuration)\"
 mkdir "$(SolutionDir)$(Platform)\$(Configuration)\lib\mono\"
 
-copy /Y "$(SolutionDir)external\mono\runtime\mscorlib.dll" "$(SolutionDir)$(Platform)\$(Configuration)\lib\mono\"
+copy /Y "$(SolutionDir)\nms++\external\mono\runtime\mscorlib.dll" "$(SolutionDir)$(Platform)\$(Configuration)\lib\mono\"
 </Command>
     </PostBuildEvent>
     <ProjectReference>
@@ -166,15 +166,18 @@ copy /Y "$(SolutionDir)external\mono\runtime\mscorlib.dll" "$(SolutionDir)$(Plat
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)external\mono\lib;$(SolutionDir)external\NMSgen\</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)nms++\external\mono\lib\;$(SolutionDir)external\NMSgen\</AdditionalLibraryDirectories>
       <AdditionalDependencies>mono-2.0-sgen.lib;NMSgen.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy /Y "$(SolutionDir)external\mono\runtime\mono-2.0-sgen.dll" "$(SolutionDir)$(Platform)\$(Configuration)\</Command>
+      <Command>copy /Y "$(SolutionDir)nms++\external\mono\runtime\mono-2.0-sgen.dll" "$(SolutionDir)$(Platform)\$(Configuration)\"
+copy /Y "$(SolutionDir)nms++\external\libMBIN\libMBIN.dll" "$(SolutionDir)$(Platform)\$(Configuration)\"
+mkdir "$(SolutionDir)$(Platform)\$(Configuration)\lib\mono\"
+
+copy /Y "$(SolutionDir)nms++\external\mono\runtime\mscorlib.dll" "$(SolutionDir)$(Platform)\$(Configuration)\lib\mono\"
+</Command>
     </PostBuildEvent>
-    <ProjectReference>
-      <LinkLibraryDependencies>false</LinkLibraryDependencies>
-    </ProjectReference>
+    <ProjectReference />
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="src\NMSapp.cpp" />
