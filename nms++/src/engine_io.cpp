@@ -1,5 +1,6 @@
 #include "../header/engine_io.h"
 #include <filesystem>
+#include <thread>
 
 MonoClass* IO::nms_template = nullptr;
 MonoClass* IO::file_io = nullptr;
@@ -60,7 +61,7 @@ void IO::WriteBytes(const std::string& out, const unsigned char* bytes, std::ios
 	write_stream.close();
 }
 
-//either .mbin or .exml files
+//either .mbin or .mxml files
 MonoObject* IO::LoadFile(const std::string& path)
 {
 	return mono_layer.RuntimeInvoke(file_io, file_io_obj, "LoadFile", path.c_str());
@@ -82,9 +83,9 @@ void IO::Write(MonoObject* to_write, const std::string& path)
 	}
 	std::string extension = path.substr(p);
 
-	if(extension == ".EXML")
+	if(extension == ".MXML")
 	{
-		WriteExml(to_write, path);
+		WriteMxml(to_write, path);
 	}
 	else if(extension == ".MBIN")
 	{
@@ -96,7 +97,7 @@ void IO::Write(MonoObject* to_write, const std::string& path)
 	}
 }
 
-void IO::WriteExml(MonoObject* to_write, const std::string& path)
+void IO::WriteMxml(MonoObject* to_write, const std::string& path)
 {
 	mono_layer.RuntimeInvoke(nms_template, to_write, "WriteToExml", path.c_str());
 }
@@ -104,4 +105,24 @@ void IO::WriteExml(MonoObject* to_write, const std::string& path)
 void IO::WriteMbin(MonoObject* to_write, const std::string& path)
 {
 	mono_layer.RuntimeInvoke(nms_template, to_write, "WriteToMbin", path.c_str());
+}
+
+void IO::PAKDirectoryContents(const std::string& directory, const std::string& pak_file_name)
+{
+	static constexpr std::chrono::milliseconds poll_interval = std::chrono::milliseconds(100);
+
+	std::string unpack_command = ".\\lib\\psarc\\PSArcTool.exe " + std::string("\"") + directory + std::string("\"");
+	IO::ExecCommand(unpack_command.c_str());
+
+	while(!std::filesystem::exists(std::filesystem::path("psarc.pak")))
+	{
+		std::this_thread::sleep_for(poll_interval);
+	}
+
+	std::filesystem::rename("psarc.pak", pak_file_name);
+}
+
+void IO::ExecCommand(const char* command)
+{
+	std::system(command);
 }

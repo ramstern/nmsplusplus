@@ -1,6 +1,6 @@
 #include "../header/NMSapp.h"
 #include "../header/GeneratedCppTypes.h"
-#include "NMSgen/NMSgen.h"
+#include "nms++/nms++.h"
 
 NMSapp::NMSapp()
 {
@@ -9,7 +9,7 @@ NMSapp::NMSapp()
 	using namespace NMS_GameComponents;
 	using namespace NMS;
 	
-	CSharpInterpreter::GenerateCppWrappers();
+	//CSharpInterpreter::GenerateCppWrappers();
 
 	IO::ResourceHandle barren_big_props_biome = {"mbin/BARRENBIGPROPSBIOME.MBIN"};
 
@@ -27,6 +27,8 @@ NMSapp::NMSapp()
 
 			biome_data.ExternalObjectLists[0].TileType.TileType = GcTerrainTileType::TileTypeEnum::Substance;
 		});
+
+	IO::PAKDirectoryContents("exml", "test.pak");
 }
 
 NMSapp::~NMSapp()

@@ -27,7 +27,7 @@ public:
 	//either exml or mbin
 	[[nodiscard]] static MonoObject* LoadFile(const std::string& path);
 
-	//has to have .exml or .mbin in the path
+	//has to have .mxml or .mbin in the path
 	static void Write(MonoObject* to_write, const std::string& path);
 	
 
@@ -43,13 +43,18 @@ public:
 	template <typename NativeType, typename Func>
 	static void ImmediateEdit(struct IO::ResourceHandle& handle, Func&& edit);
 
+	//PAK directory contents 
+	static void PAKDirectoryContents(const std::string& directory_path, const std::string& pak_file_name);
+
 private:
 	static MonoClass* nms_template;
 	static MonoClass* file_io;
 	static MonoObject* file_io_obj;
 
-	static void WriteExml(MonoObject* to_write, const std::string& path);
+	static void WriteMxml(MonoObject* to_write, const std::string& path);
 	static void WriteMbin(MonoObject* to_write, const std::string& path);
+
+	static void ExecCommand(const char* command);
 };
 
 template<typename NativeType>

@@ -71,10 +71,10 @@
     <ClInclude Include="external\fmt\include\fmt\xchar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\NMSgen\NMSgen.h">
+    <ClInclude Include="include\nms++\nms++.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\NMSgen\details\MonoLayer.h">
+    <ClInclude Include="include\nms++\details\MonoLayer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\pfr\detail\cast_to_layout_compatible.hpp">
@@ -197,14 +197,14 @@
     <ClInclude Include="include\pfr\tuple_size.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\NMSgen\details\pfr.hpp">
+    <ClInclude Include="include\nms++\details\pfr.hpp">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\NMSgen\details\traits_ext.h">
+    <ClInclude Include="include\nms++\details\traits_ext.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="include\NMSgen\details\generics_impl.hpp" />
+    <None Include="include\nms++\details\generics_impl.hpp" />
   </ItemGroup>
 </Project>
