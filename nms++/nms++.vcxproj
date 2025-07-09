@@ -190,6 +190,7 @@
     <ClInclude Include="external\fmt\include\fmt\std.h" />
     <ClInclude Include="external\fmt\include\fmt\xchar.h" />
     <ClInclude Include="header\CSharpInterpreter.h" />
+    <ClInclude Include="header\generics_impl.hpp" />
     <ClInclude Include="header\engine_io.h" />
     <ClInclude Include="header\Logger.h" />
     <ClInclude Include="header\MonoLayer.h" />

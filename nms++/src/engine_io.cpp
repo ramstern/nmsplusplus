@@ -67,9 +67,9 @@ MonoObject* IO::LoadFile(const std::string& path)
 	return mono_layer.RuntimeInvoke(file_io, file_io_obj, "LoadFile", path.c_str());
 }
 
-void IO::Write(MonoObject* to_write, const std::string& path)
+void IO::Write(ResourceHandle to_write, const std::string& path)
 {
-	if(!to_write) 
+	if(!to_write.obj) 
 	{
 		Logger::Error("To be written object was nullptr!");
 		return;
@@ -85,11 +85,11 @@ void IO::Write(MonoObject* to_write, const std::string& path)
 
 	if(extension == ".MXML")
 	{
-		WriteMxml(to_write, path);
+		WriteMxml(to_write.obj, path);
 	}
 	else if(extension == ".MBIN")
 	{
-		WriteMbin(to_write, path);
+		WriteMbin(to_write.obj, path);
 	}
 	else 
 	{
@@ -125,4 +125,15 @@ void IO::PAKDirectoryContents(const std::string& directory, const std::string& p
 void IO::ExecCommand(const char* command)
 {
 	std::system(command);
+}
+
+IO::ResourceHandle::ResourceHandle(const std::string& _path)
+{
+	path = _path;
+	obj = IO::LoadFile(path);
+}
+
+IO::ResourceHandle::ResourceHandle(MonoObject* _obj)
+{
+	obj = _obj;
 }

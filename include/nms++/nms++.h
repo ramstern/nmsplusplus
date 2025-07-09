@@ -3,14 +3,22 @@
 
 #include <string>
 #include "mono/metadata/object-forward.h"
+#include "pfr/tuple_size.hpp"
+#include "pfr/functions_for.hpp"
 #include <iostream>
 class IO
 {
 public:
 	struct ResourceHandle
 	{
+	public:
+		ResourceHandle(const std::string& path);
+
 		std::string path;
 		MonoObject* obj = nullptr;
+	private:
+		friend class IO;
+		ResourceHandle(MonoObject* obj);
 	};
 
 	static void Initialize();
@@ -19,19 +27,19 @@ public:
 
 	static void WriteBytes(const std::string& out, const unsigned char* bytes, std::ios::fmtflags flags = 16);
 
-	//either exml or mbin
+	//either mxml or mbin
 	static MonoObject* LoadFile(const std::string& path);
 
 	//has to have .mxml or .mbin in the path
-	static void Write(MonoObject* to_write, const std::string& path);
+	static void Write(ResourceHandle to_write, const std::string& path);
 	
-	//get a native object from a MonoObject
+	//get a native object from a ResourceHandle
 	template <typename NativeType>
-	static NativeType GetNativeObject(MonoObject* from_object);
+	static NativeType GetNativeObject(ResourceHandle handle);
 
-	//pushes data from a native type to a monoobject. returns success.
+	//pushes data from a native type to a ResourceHandle. returns success.
 	template <typename NativeType>
-	static bool PushData(NativeType& native_type, MonoObject* to_object);
+	static bool PushData(NativeType& native_type, ResourceHandle handle);
 
 	//immediate edit an exml or mbin in place.
 	template <typename NativeType, typename Func>
