@@ -17,7 +17,7 @@ NMSapp::NMSapp()
 		{
 			GcScreenFilterOption option{};
 			option.Filter = GcScreenFilters();
-			option.Weight = -1.f;
+			option.Weight = -10.f;
 
 			biome_data.FilterOptions.push_back(option);
 			biome_data.FloraLifeLocID.Value = "testogkdkdkdkdkdkdkdkdkdkdkdkdd";
@@ -27,6 +27,8 @@ NMSapp::NMSapp()
 
 			biome_data.ExternalObjectLists[0].TileType.TileType = GcTerrainTileType::TileTypeEnum::Substance;
 		});
+
+	IO::Write(barren_big_props_biome);
 
 	IO::PAKDirectoryContents("exml", "test.pak");
 }

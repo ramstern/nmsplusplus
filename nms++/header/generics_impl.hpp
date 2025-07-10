@@ -10,6 +10,12 @@ NativeType IO::GetNativeObject(ResourceHandle handle)
 {
 	NativeType type{};
 
+	if(!handle.obj)
+	{
+		Logger::Error("Handle with path %s is not valid!", handle.path);
+		return type;
+	}
+
 	MonoClass* object_class = mono_object_get_class(handle.obj);
 
 	std::vector<MonoClassField*> mono_fields;
@@ -484,5 +490,5 @@ void IO::ImmediateEdit(IO::ResourceHandle& handle, Func&& edit)
 
 	bool success = PushData(filled_data, handle);
 
-	if (success) IO::Write(handle, handle.path.c_str());
+	//if (success) IO::Write(handle, handle.path.c_str());
 }

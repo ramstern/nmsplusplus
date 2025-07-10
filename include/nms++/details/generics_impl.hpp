@@ -10,6 +10,12 @@ NativeType IO::GetNativeObject(ResourceHandle handle)
 {
 	NativeType type{};
 
+	if(!handle.obj)
+	{
+		Logger::Error("Handle with path %s is not valid!", handle.path);
+		return type;
+	}
+
 	MonoClass* object_class = mono_object_get_class(handle.obj);
 
 	std::vector<MonoClassField*> mono_fields;
@@ -203,6 +209,12 @@ NativeType IO::GetNativeObject(ResourceHandle handle)
 template<typename NativeType>
 bool IO::PushData(NativeType& native_type, ResourceHandle handle)
 {
+	if(!handle.obj)
+	{
+		Logger::Error("[IO] Handle %s is invalid", handle.path.c_str());
+		return;
+	}
+
 	MonoClass* object_class = mono_object_get_class(handle.obj);
 
 	std::vector<MonoClassField*> mono_fields;
@@ -220,7 +232,7 @@ bool IO::PushData(NativeType& native_type, ResourceHandle handle)
 	constexpr std::size_t field_count = pfr::tuple_size<NativeType>::value;
 	if (field_count != mono_fields.size())
 	{
-		Logger::Error("No matching field count results in a no-op.");
+		Logger::Error("[IO] No matching field count results in a no-op.");
 		return false;
 	}
 
@@ -420,7 +432,7 @@ bool IO::PushData(NativeType& native_type, ResourceHandle handle)
 						MonoObject* boxed_value = mono_value_box(mono_layer.GetDomain(), element_class, (void*)&field_value[i]);
 						if (!boxed_value)
 						{
-							Logger::Error("failed to box value!");
+							Logger::Error("[IO, PushData] failed to box value!");
 							continue;
 						}
 
@@ -484,5 +496,5 @@ void IO::ImmediateEdit(IO::ResourceHandle& handle, Func&& edit)
 
 	bool success = PushData(filled_data, handle);
 
-	if (success) IO::Write(handle, handle.path.c_str());
+	//if (success) IO::Write(handle, handle.path.c_str());
 }
