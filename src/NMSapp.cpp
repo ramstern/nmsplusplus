@@ -20,15 +20,13 @@ NMSapp::NMSapp()
 			option.Weight = -10.f;
 
 			biome_data.FilterOptions.push_back(option);
-			biome_data.FloraLifeLocID.Value = "testogkdkdkdkdkdkdkdkdkdkdkdkdd";
+			biome_data.FloraLifeLocID.Value = "no";
 			biome_data.FuelMultiplier = 2.f;
 
 			biome_data.WeatherOptions[0].WeatherWeightings[0] = 1.6f;
 
 			biome_data.ExternalObjectLists[0].TileType.TileType = GcTerrainTileType::TileTypeEnum::Substance;
 		});
-
-	IO::Write(barren_big_props_biome);
 
 	IO::PAKDirectoryContents("exml", "test.pak");
 }

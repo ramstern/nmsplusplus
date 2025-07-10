@@ -12,7 +12,7 @@ NativeType IO::GetNativeObject(ResourceHandle handle)
 
 	if(!handle.obj)
 	{
-		Logger::Error("Handle with path %s is not valid!", handle.path);
+		Logger::Error("[IO, GetNativeObject] Handle with path %s is not valid!", handle.path);
 		return type;
 	}
 
@@ -32,7 +32,7 @@ NativeType IO::GetNativeObject(ResourceHandle handle)
 	constexpr std::size_t field_count = pfr::tuple_size<NativeType>::value;
 	if (field_count != mono_fields.size())
 	{
-		Logger::Error("field count does not match! possibly wrong object -> native type mapping");
+		Logger::Error("[IO, GetNativeObject] field count does not match! possibly wrong object -> native type mapping");
 		return NativeType{};
 	}
 
@@ -209,6 +209,12 @@ NativeType IO::GetNativeObject(ResourceHandle handle)
 template<typename NativeType>
 bool IO::PushData(NativeType& native_type, ResourceHandle handle)
 {
+	if (!handle.obj)
+	{
+		Logger::Error("[IO, PushData] Handle with path %s is not valid!", handle.path);
+		return false;
+	}
+
 	MonoClass* object_class = mono_object_get_class(handle.obj);
 
 	std::vector<MonoClassField*> mono_fields;
@@ -226,7 +232,7 @@ bool IO::PushData(NativeType& native_type, ResourceHandle handle)
 	constexpr std::size_t field_count = pfr::tuple_size<NativeType>::value;
 	if (field_count != mono_fields.size())
 	{
-		Logger::Error("No matching field count results in a no-op.");
+		Logger::Error("[IO, PushData] No matching field count results in a no-op.");
 		return false;
 	}
 
@@ -490,5 +496,5 @@ void IO::ImmediateEdit(IO::ResourceHandle& handle, Func&& edit)
 
 	bool success = PushData(filled_data, handle);
 
-	//if (success) IO::Write(handle, handle.path.c_str());
+	if (success) IO::Write(handle, handle.path.c_str());
 }

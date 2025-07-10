@@ -67,26 +67,26 @@ MonoObject* IO::LoadFile(const std::string& path)
 	size_t dot_offset = path.find_last_of('.');
 	if(dot_offset == std::string::npos) 
 	{
-		Logger::Error("Invalid handle path: does not contain extension");
+		Logger::Error("[IO] Invalid handle path: does not contain extension");
 		return nullptr;
 	}
 	std::string extension = path.substr(dot_offset);
 
 	if(extension != ".MXML" && extension != ".MBIN")
 	{
-		Logger::Error("Invalid handle path: must have mbin or mxml extension");
+		Logger::Error("[IO] Invalid handle path: must have mbin or mxml extension");
 		return nullptr;
 	}
 
 	return mono_layer.RuntimeInvoke(file_io, file_io_obj, "LoadFile", path.c_str());
 }
 
-void IO::Write(ResourceHandle& handle)
+void IO::Write(ResourceHandle handle)
 {
 	IO::Write(handle, handle.path);
 }
 
-void IO::Write(ResourceHandle& to_write, const std::string& path)
+void IO::Write(ResourceHandle to_write, const std::string& path)
 {
 	if(!to_write.obj) 
 	{
@@ -114,8 +114,6 @@ void IO::Write(ResourceHandle& to_write, const std::string& path)
 	{
 		Logger::Error("[IO] Incorrect file extension: {0}", extension.c_str());
 	}
-
-	to_write.path = "INTERNALUSE";
 }
 
 void IO::WriteMxml(MonoObject* to_write, const std::string& path)
@@ -157,9 +155,4 @@ IO::ResourceHandle::ResourceHandle(const std::string& _path)
 IO::ResourceHandle::ResourceHandle(MonoObject* _obj)
 {
 	obj = _obj;
-}
-
-IO::ResourceHandle::~ResourceHandle()
-{
-	if(path != "INTERNALUSE") IO::Write(*this, path.c_str());
 }

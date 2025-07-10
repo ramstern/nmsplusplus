@@ -19,11 +19,10 @@ public:
 	{
 	public:
 		ResourceHandle(const std::string& path);
-		~ResourceHandle();
 	private:
 		friend class IO;
 
-		std::string path = "INTERNALUSE";
+		std::string path;
 		MonoObject* obj = nullptr;
 		ResourceHandle(MonoObject* obj);
 	};
@@ -38,9 +37,9 @@ public:
 	[[nodiscard]] static MonoObject* LoadFile(const std::string& path);
 
 	//uses path set in handle
-	static void Write(ResourceHandle& handle);
+	static void Write(ResourceHandle handle);
 	//uses custom path, can export to both mxml and mbin and so needs to have .mxml or .mbin in the path
-	static void Write(ResourceHandle& handle, const std::string& path);
+	static void Write(ResourceHandle handle, const std::string& path);
 
 	//get a native object from a MonoObject
 	template <typename NativeType>
