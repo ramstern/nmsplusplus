@@ -37,7 +37,7 @@ public:
 	
 	//get a native object from a ResourceHandle
 	template <typename NativeType>
-	static NativeType GetNativeObject(ResourceHandle handle);
+	static NativeType TryGetNativeObject(ResourceHandle handle);
 
 	//pushes data from a native type to a ResourceHandle. returns success.
 	template <typename NativeType>

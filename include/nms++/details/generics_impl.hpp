@@ -7,7 +7,7 @@
 
 
 template<typename NativeType>
-NativeType IO::GetNativeObject(ResourceHandle handle)
+NativeType IO::TryGetNativeObject(ResourceHandle handle)
 {
 	NativeType type{};
 
@@ -124,7 +124,7 @@ NativeType IO::GetNativeObject(ResourceHandle handle)
 						{
 							MonoObject* element_obj = mono_array_get(mono_array, MonoObject*, i);
 							if (element_obj) {
-								field_value[i] = GetNativeObject<ElementType>(element_obj);
+								field_value[i] = TryGetNativeObject<ElementType>(element_obj);
 							}
 							else {
 								field_value[i] = ElementType{};
@@ -175,7 +175,7 @@ NativeType IO::GetNativeObject(ResourceHandle handle)
 
 						// Process item_obj based on ElementType
 						if constexpr (std::is_class_v<ElementType>) {
-							field_value.push_back(GetNativeObject<ElementType>(item_obj));
+							field_value.push_back(TryGetNativeObject<ElementType>(item_obj));
 						}
 						else {
 							ElementType value = *(ElementType*)mono_object_unbox(item_obj);
@@ -193,7 +193,7 @@ NativeType IO::GetNativeObject(ResourceHandle handle)
 				MonoObject* nested_object = mono_field_get_value_object(mono_layer.GetDomain(), mono_field, handle.obj);
 				if (nested_object)
 				{
-					field_value = GetNativeObject<FieldType>(ResourceHandle(nested_object));
+					field_value = TryGetNativeObject<FieldType>(ResourceHandle(nested_object));
 				}
 				else
 				{
@@ -523,7 +523,7 @@ IO::ResourceHandle IO::PushData(NativeType& native_type)
 template<typename NativeType, typename Func>
 void IO::ImmediateEdit(IO::ResourceHandle& handle, Func&& edit)
 {
-	NativeType filled_data = GetNativeObject<NativeType>(handle);
+	NativeType filled_data = TryGetNativeObject<NativeType>(handle);
 
 	edit(filled_data);
 

@@ -43,7 +43,7 @@ public:
 
 	//get a native object from a MonoObject
 	template <typename NativeType>
-	[[nodiscard]] static NativeType GetNativeObject(ResourceHandle handle);
+	[[nodiscard]] static NativeType TryGetNativeObject(ResourceHandle handle);
 
 	//pushes data from a native type to an existing handle. returns success.
 	template <typename NativeType>
