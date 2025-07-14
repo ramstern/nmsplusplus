@@ -11,9 +11,17 @@ NMSapp::NMSapp()
 	
 	//CSharpInterpreter::GenerateCppWrappers();
 
-	IO::ResourceHandle barren_big_props_biome = {"mbin/BARRENBIGPROPSBIOME.MBIN"};
+	IO::ResourceHandle biome_handle = {"mbin/BARRENBIGPROPSBIOME.MBIN"};
 
-	IO::ImmediateEdit<GcBiomeData>(barren_big_props_biome, [](GcBiomeData& biome_data)
+	GcBiomeData barren_big_props_biome = IO::GetNativeObject<GcBiomeData>(biome_handle);
+
+	GcBiomeData new_biome_data = barren_big_props_biome;
+	new_biome_data.FuelMultiplier = 10.f;
+
+	IO::ResourceHandle new_biome_handle = IO::PushData(new_biome_data);
+	IO::Write(new_biome_handle, "mbin/NEWBIOME.MBIN");
+
+	/*IO::ImmediateEdit<GcBiomeData>(barren_big_props_biome, [](GcBiomeData& biome_data)
 		{
 			GcScreenFilterOption option{};
 			option.Filter = GcScreenFilters();
@@ -26,7 +34,7 @@ NMSapp::NMSapp()
 			biome_data.WeatherOptions[0].WeatherWeightings[0] = 1.6f;
 
 			biome_data.ExternalObjectLists[0].TileType.TileType = GcTerrainTileType::TileTypeEnum::Substance;
-		});
+		});*/
 
 	IO::PAKDirectoryContents("exml", "test.pak");
 }

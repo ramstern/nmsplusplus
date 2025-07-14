@@ -147,7 +147,8 @@ copy /Y "$(SolutionDir)nms++\external\psarc\PSArcTool.exe" "$(SolutionDir)$(Plat
     <PreBuildEvent>
       <Command>mkdir "$(ProjectDir)external\nms++\"
 copy /Y "$(ProjectDir)nms++\$(Platform)\$(Configuration)\nms++.lib" "$(ProjectDir)external\nms++\"
-copy /Y "$(ProjectDir)nms++\header\generics_impl.hpp" "$(ProjectDir)include\nms++\details\"</Command>
+copy /Y "$(ProjectDir)nms++\header\generics_impl.hpp" "$(ProjectDir)include\nms++\details\"
+copy /Y "$(ProjectDir)nms++\header\MonoLayer.h" "$(ProjectDir)include\nms++\details\"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -182,7 +183,8 @@ copy /Y "$(SolutionDir)nms++\external\psarc\PSArcTool.exe" "$(SolutionDir)$(Plat
     <PreBuildEvent>
       <Command>mkdir "$(ProjectDir)external\nms++\"
 copy /Y "$(ProjectDir)nms++\$(Platform)\$(Configuration)\nms++.lib" "$(ProjectDir)external\nms++\"
-copy /Y "$(ProjectDir)nms++\header\generics_impl.hpp" "$(ProjectDir)include\nms++\details\"</Command>
+copy /Y "$(ProjectDir)nms++\header\generics_impl.hpp" "$(ProjectDir)include\nms++\details\"
+copy /Y "$(ProjectDir)nms++\header\MonoLayer.h" "$(ProjectDir)include\nms++\details\"</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

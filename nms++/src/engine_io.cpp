@@ -94,6 +94,12 @@ void IO::Write(ResourceHandle to_write, const std::string& path)
 		return;
 	}
 
+	if(path == "INVALIDPATH")
+	{
+		Logger::Error("Cannot write handles made from PushData, please use Write and specify a path yourself!");
+		return;
+	}
+
 	size_t p = path.find_last_of(".");
 	if(p == std::string::npos) 
 	{

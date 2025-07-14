@@ -43,6 +43,10 @@ public:
 	template <typename NativeType>
 	static bool PushData(NativeType& native_type, ResourceHandle handle);
 
+	//pushes data from a nativetype to a new handle. returns new handle.
+	template <typename NativeType>
+	static ResourceHandle PushData(NativeType& native_type);
+
 	//immediate edit an exml or mbin in place. Gets native type, pushes data, and writes all at once.
 	template <typename NativeType, typename Func>
 	static void ImmediateEdit(struct IO::ResourceHandle& handle, Func&& edit);

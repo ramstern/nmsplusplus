@@ -45,11 +45,15 @@ public:
 	template <typename NativeType>
 	[[nodiscard]] static NativeType GetNativeObject(ResourceHandle handle);
 
-	//pushes data from a native type to a monoobject. returns success.
+	//pushes data from a native type to an existing handle. returns success.
 	template <typename NativeType>
 	static bool PushData(NativeType& native_type, ResourceHandle handle);
 
-	//immediate edit an mxml or mbin in place.
+	//pushes data from a nativetype to a new handle. returns new handle.
+	template <typename NativeType>
+	static ResourceHandle PushData(NativeType& native_type);
+
+	//immediate edit an exml or mbin in place. Gets native type, pushes data, and writes all at once.
 	template <typename NativeType, typename Func>
 	static void ImmediateEdit(struct IO::ResourceHandle& handle, Func&& edit);
 

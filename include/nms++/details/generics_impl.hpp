@@ -5,6 +5,7 @@
 
 #include "../header/Logger.h" 
 
+
 template<typename NativeType>
 NativeType IO::GetNativeObject(ResourceHandle handle)
 {
@@ -221,7 +222,6 @@ bool IO::PushData(NativeType& native_type, ResourceHandle handle)
 	void* iter = nullptr;
 	MonoClassField* field;
 
-
 	while ((field = mono_class_get_fields(object_class, &iter)))
 	{
 		mono_fields.push_back(field);
@@ -309,6 +309,12 @@ bool IO::PushData(NativeType& native_type, ResourceHandle handle)
 				{
 					MonoArray* mono_array;
 					mono_field_get_value(handle.obj, mono_field, &mono_array);
+
+					if(mono_array == nullptr)
+					{
+						mono_array = mono_array_new(mono_layer.GetDomain(), element_class, array_size);
+						mono_field_set_value(handle.obj, mono_field, mono_array);
+					}
 
 					for (size_t i = 0; i < array_size; i++)
 					{
@@ -485,6 +491,33 @@ bool IO::PushData(NativeType& native_type, ResourceHandle handle)
 
 	return true;
 	//mono_layer.LogMonoObjectFields(to_object);
+}
+
+template<typename NativeType>
+IO::ResourceHandle IO::PushData(NativeType& native_type)
+{
+	std::string msvc_name = std::string(typeid(NativeType).name());
+
+	size_t offset = msvc_name.find_last_of("::");
+	size_t namespace_offset = msvc_name.find_first_of(" ");
+
+	std::string namespace_name = msvc_name.substr(namespace_offset+1, offset - namespace_offset - 2);
+	std::string demangled_name = msvc_name.substr(offset + 1);
+
+	size_t namespace_underscore = namespace_name.find("_");
+
+	namespace_name.replace(namespace_underscore, 1, ".");
+	namespace_name = "libMBIN." + namespace_name;
+
+	auto mono_class = mono_layer.GetClass(namespace_name.c_str(), demangled_name.c_str());
+	auto instance = mono_layer.CreateInstanceOfClass(mono_class);
+
+	IO::ResourceHandle new_resource_handle = IO::ResourceHandle(instance);
+	new_resource_handle.path = "INVALIDPATH";
+
+	PushData(native_type, new_resource_handle);
+
+	return new_resource_handle;
 }
 
 template<typename NativeType, typename Func>
