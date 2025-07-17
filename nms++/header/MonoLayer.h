@@ -87,7 +87,7 @@ MonoObject* MonoLayer::RuntimeInvoke(MonoClass* _class, MonoObject* object, cons
     }
 
     std::vector<void*> args_vector;
-    Logger::Info("args size: {0}", sizeof...(Args));
+    //Logger::Info("args size: {0}", sizeof...(Args));
     if(sizeof...(Args) > 0)
     {
         PrepareArgsVec(args_vector, std::forward<Args>(args)...);

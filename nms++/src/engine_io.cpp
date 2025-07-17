@@ -106,6 +106,14 @@ void IO::Write(ResourceHandle to_write, const std::string& path)
 		Logger::Error("[IO] No file extension provided!");
 		return;
 	}
+	
+	auto fspath = std::filesystem::path(path);
+	fspath.remove_filename();
+	if(!std::filesystem::exists(fspath))
+	{
+		std::filesystem::create_directory(fspath);
+	}
+
 	std::string extension = path.substr(p);
 
 	if(extension == ".MXML")

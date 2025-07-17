@@ -2,13 +2,11 @@
 #include <string>
 #include "../header/MonoLayer.h"
 #include "../header/traits_ext.h"
-
 #include "../header/Logger.h" 
-
 #include "pfr/tuple_size.hpp"
 #include "pfr/functions_for.hpp"
-
 #include <fstream>
+#include <filesystem>
 
 class IO
 {
@@ -51,7 +49,7 @@ public:
 
 	//pushes data from a nativetype to a new handle. returns new handle.
 	template <typename NativeType>
-	static ResourceHandle PushData(NativeType& native_type);
+	[[nodiscard]] static ResourceHandle PushData(NativeType& native_type);
 
 	//immediate edit an exml or mbin in place. Gets native type, pushes data, and writes all at once.
 	template <typename NativeType, typename Func>

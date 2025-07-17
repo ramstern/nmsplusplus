@@ -44,8 +44,6 @@ namespace CSharpInterpreter
 
 	void GenerateCppWrappers();
 
-	std::string GenerateEnumCode(std::multimap<std::string, EnumInfo>& multimapped_enums);
-
 	std::unordered_map<std::string, std::string> GenerateTypesStructs(std::multimap<std::string, TypeInfo>& multimapped_types);
 
 	//internal
@@ -65,6 +63,6 @@ namespace CSharpInterpreter
 	void HandleEnumCornerCases(std::string& _type);
 	void VectorTypePassFix(std::string& full_name);
 
-	std::string ParseToCppMember(FieldInfo& info);
+	std::pair<std::string, bool> ParseToCppMember(FieldInfo& info);
 };
 
